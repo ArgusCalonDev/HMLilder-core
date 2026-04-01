@@ -1,6 +1,7 @@
 // Konverter inline style HTML ke class CSS dan merapikan output
 function convertInlineStyle() {
     const inputHtml = document.getElementById('inline-html-input').value;
+    const inputClassName = document.getElementById('class-name-input').value;
 
     if (!inputHtml.trim()) {
         alert('Masukkan HTML dengan inline style terlebih dahulu.');
@@ -23,7 +24,7 @@ function convertInlineStyle() {
         return;
     }
 
-    const namaClass = elemen.getAttribute('class') || 'generated';
+    const namaClass = elemen.getAttribute('class') || `${inputClassName}`;
     const classSelector = `.${namaClass}`;
 
     // Buat format CSS dari inline style
