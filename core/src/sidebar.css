@@ -1,0 +1,103 @@
+  /* Sidebar */
+  .sidebar {
+    width: 450px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: -450px; /* awalnya tersembunyi */
+    top: 0;
+    transition: left 0.3s;
+  }
+
+  .sidebar.active {
+    left: 0; /* tampil */
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+  }
+
+  .sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  .sidebar .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Konten */
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+
+  .content.shift {
+    margin-left: 250px; /* geser pas sidebar muncul */
+  }
+
+  /* Tombol */
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+.sidebar .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+}
+
+/* Class ketika dropdown aktif */
+.sidebar .dropdown-container.active {
+    display: block;
+    max-height: 500px; /* Atau nilai yang cukup besar */
+}
+
+/* Animasi rotasi panah */
+.sidebar .dropdown-btn.active .fa-caret-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect untuk dropdown button */
+.sidebar .dropdown-btn:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}

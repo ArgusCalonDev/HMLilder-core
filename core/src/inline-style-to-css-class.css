@@ -1,0 +1,32 @@
+/* ===== RESET & VARIABLES ===== */
+:root {
+    --primary: #4361ee;
+    --secondary: #3a0ca3;
+    --dark: #2b2d42;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --border-radius: 12px;
+    --shadow: 0 8px 20px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+body { background: linear-gradient(135deg,#f5f7fa 0%,#e4edf5 100%); color: var(--dark); min-height: 100vh; padding: 20px; }
+.container { max-width:1400px; margin:0 auto; }
+.header { text-align:center; margin-bottom:30px; padding:25px; background:white; border-radius:var(--border-radius); box-shadow:var(--shadow); }
+.logo { font-size:2.8rem; font-weight:800; background:linear-gradient(90deg,var(--primary),var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:10px; }
+.tagline { color:var(--gray); font-size:1.2rem; margin-bottom:15px; }
+.generator-section{display:flex;flex-wrap:wrap;gap:25px;margin-bottom:40px;}
+.generator-panel,.preview-panel{flex:1;min-width:300px;background:white;border-radius:var(--border-radius);box-shadow:var(--shadow);padding:25px;}
+.generator-panel h2,.preview-panel h2{font-size:1.5rem;margin-bottom:20px;}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;margin-bottom:8px;font-weight:600;}
+.form-group textarea{width:100%;padding:12px;border:2px solid #e9ecef;border-radius:8px;font-family:'Courier New',monospace;resize:vertical;}
+.generate-btn{background:linear-gradient(90deg,var(--primary),var(--secondary));color:white;border:none;padding:14px 28px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:var(--transition);width:100%;}
+.generate-btn:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(67,97,238,0.3);}
+.preview-area{border:2px dashed #e9ecef;border-radius:8px;padding:20px;min-height:200px;background:#fafbfc;}
+.output-panel{background:white;border-radius:var(--border-radius);box-shadow:var(--shadow);padding:25px;margin-bottom:40px;}
+.code-section{margin-bottom:25px;}
+.code-section h3{font-size:1.1rem;margin-bottom:10px;}
+.code-output{background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:15px;font-family:'Courier New',monospace;font-size:14px;line-height:1.4;white-space:pre-wrap;word-wrap:break-word;min-height:80px;}
+@media(max-width:768px){.generator-section{flex-direction:column;}.logo{font-size:2.2rem;}}
